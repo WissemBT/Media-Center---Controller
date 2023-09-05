@@ -1,0 +1,169 @@
+\begin{theindex}
+
+  \item {$\sim$Film}
+    \subitem {Film}, \hyperpage{11}
+
+  \indexspace
+
+  \item {accept}
+    \subitem {ServerSocket}, \hyperpage{17}
+  \item {afficher}
+    \subitem {Film}, \hyperpage{12}
+    \subitem {Multimedia}, \hyperpage{14}
+    \subitem {Photo}, \hyperpage{15}
+    \subitem {Video}, \hyperpage{28}
+
+  \indexspace
+
+  \item {bind}
+    \subitem {ServerSocket}, \hyperpage{17}
+    \subitem {Socket}, \hyperpage{20}
+
+  \indexspace
+
+  \item {connect}
+    \subitem {Socket}, \hyperpage{20}
+  \item {createFilm}
+    \subitem {Database}, \hyperpage{7}
+  \item {createGroup}
+    \subitem {Database}, \hyperpage{8}
+  \item {createPhoto}
+    \subitem {Database}, \hyperpage{8}
+  \item {createVideo}
+    \subitem {Database}, \hyperpage{9}
+
+  \indexspace
+
+  \item {Database}, \hyperpage{7}
+    \subitem {createFilm}, \hyperpage{7}
+    \subitem {createGroup}, \hyperpage{8}
+    \subitem {createPhoto}, \hyperpage{8}
+    \subitem {createVideo}, \hyperpage{9}
+    \subitem {findANDPlay}, \hyperpage{9}
+    \subitem {findANDShow}, \hyperpage{10}
+    \subitem {processRequest}, \hyperpage{10}
+  \item {database.h}, \hyperpage{31}
+
+  \indexspace
+
+  \item {Errors}
+    \subitem {Socket}, \hyperpage{19}
+
+  \indexspace
+
+  \item {Film}, \hyperpage{10}
+    \subitem {$\sim$Film}, \hyperpage{11}
+    \subitem {afficher}, \hyperpage{12}
+    \subitem {Film}, \hyperpage{11}
+    \subitem {operator=}, \hyperpage{12}
+    \subitem {setChapters}, \hyperpage{12}
+  \item {film.h}, \hyperpage{33}
+  \item {findANDPlay}
+    \subitem {Database}, \hyperpage{9}
+  \item {findANDShow}
+    \subitem {Database}, \hyperpage{10}
+
+  \indexspace
+
+  \item {Group}, \hyperpage{13}
+  \item {group.h}, \hyperpage{35}
+
+  \indexspace
+
+  \item {InputBuffer}, \hyperpage{13}
+
+  \indexspace
+
+  \item {lire}
+    \subitem {Multimedia}, \hyperpage{14}
+    \subitem {Photo}, \hyperpage{16}
+    \subitem {Video}, \hyperpage{28}
+
+  \indexspace
+
+  \item {main.cpp}, \hyperpage{36}
+  \item {Multimedia}, \hyperpage{14}
+    \subitem {afficher}, \hyperpage{14}
+    \subitem {lire}, \hyperpage{14}
+  \item {multimedia.cpp}, \hyperpage{37}
+  \item {multimedia.h}, \hyperpage{38}
+
+  \indexspace
+
+  \item {operator=}
+    \subitem {Film}, \hyperpage{12}
+
+  \indexspace
+
+  \item {Photo}, \hyperpage{15}
+    \subitem {afficher}, \hyperpage{15}
+    \subitem {lire}, \hyperpage{16}
+  \item {photo.h}, \hyperpage{39}
+  \item {processRequest}
+    \subitem {Database}, \hyperpage{10}
+
+  \indexspace
+
+  \item {read}
+    \subitem {SocketBuffer}, \hyperpage{23}
+  \item {readLine}
+    \subitem {SocketBuffer}, \hyperpage{23}
+  \item {receive}
+    \subitem {Socket}, \hyperpage{21}
+  \item {run}
+    \subitem {TCPServer}, \hyperpage{27}
+
+  \indexspace
+
+  \item {send}
+    \subitem {Socket}, \hyperpage{21}
+  \item {ServerSocket}, \hyperpage{16}
+    \subitem {accept}, \hyperpage{17}
+    \subitem {bind}, \hyperpage{17}
+  \item {setChapters}
+    \subitem {Film}, \hyperpage{12}
+  \item {setReadSeparator}
+    \subitem {SocketBuffer}, \hyperpage{24}
+  \item {setWriteSeparator}
+    \subitem {SocketBuffer}, \hyperpage{24}
+  \item {Socket}, \hyperpage{17}
+    \subitem {bind}, \hyperpage{20}
+    \subitem {connect}, \hyperpage{20}
+    \subitem {Errors}, \hyperpage{19}
+    \subitem {receive}, \hyperpage{21}
+    \subitem {send}, \hyperpage{21}
+    \subitem {Socket}, \hyperpage{19}
+    \subitem {startup}, \hyperpage{21}
+  \item {SocketBuffer}, \hyperpage{22}
+    \subitem {read}, \hyperpage{23}
+    \subitem {readLine}, \hyperpage{23}
+    \subitem {setReadSeparator}, \hyperpage{24}
+    \subitem {setWriteSeparator}, \hyperpage{24}
+    \subitem {SocketBuffer}, \hyperpage{23}
+    \subitem {write}, \hyperpage{24}
+    \subitem {writeLine}, \hyperpage{25}
+  \item {SocketCnx}, \hyperpage{25}
+  \item {startup}
+    \subitem {Socket}, \hyperpage{21}
+
+  \indexspace
+
+  \item {TCPServer}, \hyperpage{26}
+    \subitem {run}, \hyperpage{27}
+    \subitem {TCPServer}, \hyperpage{26}
+
+  \indexspace
+
+  \item {Video}, \hyperpage{27}
+    \subitem {afficher}, \hyperpage{28}
+    \subitem {lire}, \hyperpage{28}
+  \item {video.h}, \hyperpage{40}
+
+  \indexspace
+
+  \item {write}
+    \subitem {SocketBuffer}, \hyperpage{24}
+  \item {writeLine}
+    \subitem {SocketBuffer}, \hyperpage{25}
+
+\end{theindex}

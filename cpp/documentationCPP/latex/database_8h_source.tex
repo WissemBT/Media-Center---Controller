@@ -1,0 +1,114 @@
+\hypertarget{database_8h_source}{}\doxysection{database.\+h}
+\mbox{\hyperlink{database_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef DATABASE\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define DATABASE\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <bits/stdc++.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{multimedia_8h}{multimedia.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{photo_8h}{photo.h}}"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{video_8h}{video.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{film_8h}{film.h}}"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{group_8h}{group.h}}"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}tcpserver.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{using }ptrPhoto = shared\_ptr<Photo>;}
+\DoxyCodeLine{23 \textcolor{keyword}{using }ptrVideo = shared\_ptr<Video>;}
+\DoxyCodeLine{24 \textcolor{keyword}{using }ptrFilm = shared\_ptr<Film>;}
+\DoxyCodeLine{25 \textcolor{keyword}{using }ptrGroup = shared\_ptr<Group>;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{32 \textcolor{keyword}{class }\mbox{\hyperlink{classDatabase}{Database}}\{}
+\DoxyCodeLine{33     \textcolor{keyword}{private}:}
+\DoxyCodeLine{34         map<string,ptrMultimedia> multimediaTable;}
+\DoxyCodeLine{35         map<string,ptrGroup> groupTable;}
+\DoxyCodeLine{36     \textcolor{keyword}{public}:}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \mbox{\hyperlink{classDatabase}{Database}}()\{\}}
+\DoxyCodeLine{48     ptrPhoto \mbox{\hyperlink{classDatabase_add9f1104b1e8f5967baf44c411c91142}{createPhoto}}(\textcolor{keywordtype}{string} \_objName,\textcolor{keywordtype}{string} \_pathName,\textcolor{keywordtype}{double} \_latitude,\textcolor{keywordtype}{double} \_longitude)\{}
+\DoxyCodeLine{49         ptrPhoto \_Ph(\textcolor{keyword}{new} \mbox{\hyperlink{classPhoto}{Photo}}(\_objName,\_pathName,\_latitude,\_longitude));}
+\DoxyCodeLine{50         multimediaTable[\_objName]=\_Ph;}
+\DoxyCodeLine{51         \textcolor{keywordflow}{return} \_Ph;}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{61     ptrVideo \mbox{\hyperlink{classDatabase_aeaa03962b94930a82d5f86e29b4cfaa8}{createVideo}}(\textcolor{keywordtype}{string} \_objName,\textcolor{keywordtype}{string} \_pathName,\textcolor{keywordtype}{int} \_duree)\{}
+\DoxyCodeLine{62         ptrVideo \_Vi(\textcolor{keyword}{new} \mbox{\hyperlink{classVideo}{Video}}(\_objName,\_pathName,\_duree));}
+\DoxyCodeLine{63         multimediaTable[\_objName]=\_Vi;}
+\DoxyCodeLine{64         \textcolor{keywordflow}{return} \_Vi;}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{76     ptrFilm \mbox{\hyperlink{classDatabase_a23e6f2a08bb0d508f78ccf4f2112d7cd}{createFilm}}(\textcolor{keywordtype}{string} \_objName,\textcolor{keywordtype}{string} \_pathName,\textcolor{keywordtype}{int} \_duree,\textcolor{keywordtype}{int} \_nOfChptrs,\textcolor{keywordtype}{int} * \_chptrs)\{}
+\DoxyCodeLine{77         ptrFilm \_Fi(\textcolor{keyword}{new} \mbox{\hyperlink{classFilm}{Film}}(\_objName,\_pathName,\_duree,\_nOfChptrs,\_chptrs));}
+\DoxyCodeLine{78         multimediaTable[\_objName]=\_Fi;}
+\DoxyCodeLine{79         \textcolor{keywordflow}{return} \_Fi;}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{87     ptrGroup \mbox{\hyperlink{classDatabase_a36b028bc8cceb0462a6c20aeb4eb7dcb}{createGroup}}(\textcolor{keywordtype}{string} \_groupName)\{}
+\DoxyCodeLine{88         ptrGroup \_Gr(\textcolor{keyword}{new} \mbox{\hyperlink{classGroup}{Group}}(\_groupName));}
+\DoxyCodeLine{89         groupTable[\_groupName]=\_Gr;}
+\DoxyCodeLine{90         \textcolor{keywordflow}{return} \_Gr;}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{100     \textcolor{keywordtype}{void} \mbox{\hyperlink{classDatabase_ae0bb5fdf3994ee7217d13eddc2991606}{findANDShow}}(\textcolor{keywordtype}{string} \_objName,ostream \& s)\{}
+\DoxyCodeLine{101         \textcolor{keyword}{auto} elementMultimedia = multimediaTable.find(\_objName);}
+\DoxyCodeLine{102         \textcolor{keyword}{auto} elementGroup = groupTable.find(\_objName);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104         \textcolor{keywordflow}{if}(elementMultimedia==multimediaTable.end() \&\& elementGroup==groupTable.end())\{}
+\DoxyCodeLine{105             s << \textcolor{stringliteral}{"{}There's no element named "{}} << \_objName << \textcolor{stringliteral}{"{} in the database."{}} << endl;}
+\DoxyCodeLine{106         \}}
+\DoxyCodeLine{107         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(elementMultimedia!=multimediaTable.end())\{}
+\DoxyCodeLine{108             s << \textcolor{stringliteral}{"{}Multimedia object "{}} << \_objName << \textcolor{stringliteral}{"{} exist."{}} << endl;;}
+\DoxyCodeLine{109             elementMultimedia-\/>second-\/>afficher(s);}
+\DoxyCodeLine{110         \}}
+\DoxyCodeLine{111         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(elementGroup!=groupTable.end())}
+\DoxyCodeLine{112         \{}
+\DoxyCodeLine{113             s << \textcolor{stringliteral}{"{}Group "{}} << \_objName << \textcolor{stringliteral}{"{} exist."{}} << endl;;}
+\DoxyCodeLine{114             elementGroup-\/>second-\/>show(s);}
+\DoxyCodeLine{115         \}}
+\DoxyCodeLine{116     \}}
+\DoxyCodeLine{125     \textcolor{keywordtype}{int} \mbox{\hyperlink{classDatabase_a9b0a5ae006dcf565ab7585b345d4657c}{findANDPlay}}(\textcolor{keywordtype}{string} \_objName)\{}
+\DoxyCodeLine{126         \textcolor{keyword}{auto} elementMultimedia = multimediaTable.find(\_objName);}
+\DoxyCodeLine{127         \textcolor{keywordflow}{if}(elementMultimedia!=multimediaTable.end())\{}
+\DoxyCodeLine{128             elementMultimedia-\/>second-\/>lire();}
+\DoxyCodeLine{129             \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{130         \}}
+\DoxyCodeLine{131         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{132             cout <<\textcolor{stringliteral}{"{}Multimedia Object named "{}} << \_objName << \textcolor{stringliteral}{"{} doesn't exist."{}} <<endl;}
+\DoxyCodeLine{133             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{134         \}}
+\DoxyCodeLine{135     \}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 }
+\DoxyCodeLine{149     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classDatabase_aace0a1812995e8e1d69bf6acb1d18ce0}{processRequest}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \& request, \textcolor{keywordtype}{string} \& response)\{}
+\DoxyCodeLine{150         stringstream ss(request);}
+\DoxyCodeLine{151         \textcolor{keywordtype}{string} operation , name, buffer;}
+\DoxyCodeLine{152         ss >> operation >> name;}
+\DoxyCodeLine{153         \textcolor{keywordflow}{while}(ss >> buffer)\{}
+\DoxyCodeLine{154             name = name + \textcolor{stringliteral}{"{} "{}} + buffer;}
+\DoxyCodeLine{155         \}}
+\DoxyCodeLine{156         }
+\DoxyCodeLine{157         \textcolor{keywordflow}{if}(operation==\textcolor{stringliteral}{"{}find"{}})}
+\DoxyCodeLine{158         \{}
+\DoxyCodeLine{159             stringstream s;}
+\DoxyCodeLine{160             \mbox{\hyperlink{classDatabase_ae0bb5fdf3994ee7217d13eddc2991606}{findANDShow}}(name,s);}
+\DoxyCodeLine{161             response=s.str();}
+\DoxyCodeLine{162             replace(response.begin(),response.end(),\textcolor{charliteral}{'\(\backslash\)n'},\textcolor{charliteral}{';'}) ;     }
+\DoxyCodeLine{163         \}}
+\DoxyCodeLine{164         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operation==\textcolor{stringliteral}{"{}play"{}})\{}
+\DoxyCodeLine{165             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classDatabase_a9b0a5ae006dcf565ab7585b345d4657c}{findANDPlay}}(name))}
+\DoxyCodeLine{166             \{}
+\DoxyCodeLine{167                 response=\textcolor{stringliteral}{"{}File "{}}+name+\textcolor{stringliteral}{"{} is currently playing on the server"{}};}
+\DoxyCodeLine{168             \}}
+\DoxyCodeLine{169             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{170                 response=\textcolor{stringliteral}{"{}File "{}}+name+\textcolor{stringliteral}{"{} Was NOT FOUND"{}};}
+\DoxyCodeLine{171             \}}
+\DoxyCodeLine{172         \}}
+\DoxyCodeLine{173         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{174         \{}
+\DoxyCodeLine{175             response=\textcolor{stringliteral}{"{}Undefined command, use find <filename> or play <filename>"{}};}
+\DoxyCodeLine{176         \}}
+\DoxyCodeLine{177     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{178     \}}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180 \};}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

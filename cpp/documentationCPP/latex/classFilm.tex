@@ -1,0 +1,126 @@
+\hypertarget{classFilm}{}\doxysection{Film Class Reference}
+\label{classFilm}\index{Film@{Film}}
+
+
+a \mbox{\hyperlink{classFilm}{Film}} class which herit from the \mbox{\hyperlink{classVideo}{Video}} class  
+
+
+
+
+{\ttfamily \#include $<$film.\+h$>$}
+
+Inheritance diagram for Film\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classFilm}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFilm_a8041340979cd725f15c3e0306d46449f}\label{classFilm_a8041340979cd725f15c3e0306d46449f}} 
+{\bfseries Film} (string \+\_\+obj\+Name, string \+\_\+path\+Name, int \+\_\+duree, int \+\_\+nbr\+Of\+Chapters=0, int $\ast$\+\_\+chapters=nullptr)
+\item 
+void \mbox{\hyperlink{classFilm_a5d3beec5ffe551d4c3d19abc64d31b24}{set\+Chapters}} (int $\ast$\+\_\+chapters=nullptr, int \+\_\+nbr\+Of\+Chapters=0)
+\begin{DoxyCompactList}\small\item\em Set the Chapters object destroying the old chapters before seting the new ones. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFilm_a12421342d9729d750772d6fd112db01a}\label{classFilm_a12421342d9729d750772d6fd112db01a}} 
+int {\bfseries get\+Nbr\+Of\+Chapters} () const
+\item 
+\mbox{\Hypertarget{classFilm_a7bdcc9cb81df92862f98b3b6b286ab4a}\label{classFilm_a7bdcc9cb81df92862f98b3b6b286ab4a}} 
+const int $\ast$ {\bfseries get\+Chapters} () const
+\item 
+void \mbox{\hyperlink{classFilm_a7c1b6c565799ff29c975362af76c85aa}{afficher}} (ostream \&s) const override
+\item 
+\mbox{\hyperlink{classFilm_a68f781851622ec80878c9a6e7ccb925e}{Film}} (const \mbox{\hyperlink{classFilm}{Film}} \&from)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classFilm}{Film}} object using another object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFilm}{Film}} \& \mbox{\hyperlink{classFilm_ac0b358393c6e1d293141c5c96cd9a3be}{operator=}} (const \mbox{\hyperlink{classFilm}{Film}} \&from)
+\begin{DoxyCompactList}\small\item\em The = operator for the film class as it contains pointers. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classFilm_a490465154daeb29961fddb843a864eeb}{$\sim$\+Film}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classFilm}{Film}} object and the chapters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+a \mbox{\hyperlink{classFilm}{Film}} class which herit from the \mbox{\hyperlink{classVideo}{Video}} class 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFilm_a68f781851622ec80878c9a6e7ccb925e}\label{classFilm_a68f781851622ec80878c9a6e7ccb925e}} 
+\index{Film@{Film}!Film@{Film}}
+\index{Film@{Film}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{Film()}{Film()}}
+{\footnotesize\ttfamily Film\+::\+Film (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFilm}{Film}} \&}]{from }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classFilm}{Film}} object using another object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFilm_a490465154daeb29961fddb843a864eeb}\label{classFilm_a490465154daeb29961fddb843a864eeb}} 
+\index{Film@{Film}!````~Film@{$\sim$Film}}
+\index{````~Film@{$\sim$Film}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{$\sim$Film()}{~Film()}}
+{\footnotesize\ttfamily virtual Film\+::$\sim$\+Film (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{classFilm}{Film}} object and the chapters. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFilm_a7c1b6c565799ff29c975362af76c85aa}\label{classFilm_a7c1b6c565799ff29c975362af76c85aa}} 
+\index{Film@{Film}!afficher@{afficher}}
+\index{afficher@{afficher}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{afficher()}{afficher()}}
+{\footnotesize\ttfamily void Film\+::afficher (\begin{DoxyParamCaption}\item[{ostream \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classMultimedia}{Multimedia}}.
+
+\mbox{\Hypertarget{classFilm_ac0b358393c6e1d293141c5c96cd9a3be}\label{classFilm_ac0b358393c6e1d293141c5c96cd9a3be}} 
+\index{Film@{Film}!operator=@{operator=}}
+\index{operator=@{operator=}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFilm}{Film}} \& Film\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFilm}{Film}} \&}]{from }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The = operator for the film class as it contains pointers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classFilm}{Film}}\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilm_a5d3beec5ffe551d4c3d19abc64d31b24}\label{classFilm_a5d3beec5ffe551d4c3d19abc64d31b24}} 
+\index{Film@{Film}!setChapters@{setChapters}}
+\index{setChapters@{setChapters}!Film@{Film}}
+\doxysubsubsection{\texorpdfstring{setChapters()}{setChapters()}}
+{\footnotesize\ttfamily void Film\+::set\+Chapters (\begin{DoxyParamCaption}\item[{int $\ast$}]{\+\_\+chapters = {\ttfamily nullptr},  }\item[{int}]{\+\_\+nbr\+Of\+Chapters = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Chapters object destroying the old chapters before seting the new ones. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+chapters} & \\
+\hline
+{\em \+\_\+nbr\+Of\+Chapters} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{film_8h}{film.\+h}}\end{DoxyCompactItemize}

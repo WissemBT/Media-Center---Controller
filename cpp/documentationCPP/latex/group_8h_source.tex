@@ -1,0 +1,35 @@
+\hypertarget{group_8h_source}{}\doxysection{group.\+h}
+\mbox{\hyperlink{group_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef GROUP\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define GROUP\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{multimedia_8h}{multimedia.h}}"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{using }ptrMultimedia = shared\_ptr<Multimedia>;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{classGroup}{Group}}: \textcolor{keyword}{public} list<ptrMultimedia>\{}
+\DoxyCodeLine{23     \textcolor{keyword}{private}:}
+\DoxyCodeLine{24         \textcolor{keywordtype}{string} groupName\{\};}
+\DoxyCodeLine{25     \textcolor{keyword}{public}:}
+\DoxyCodeLine{26         \mbox{\hyperlink{classGroup}{Group}}();}
+\DoxyCodeLine{27         \mbox{\hyperlink{classGroup}{Group}}(\textcolor{keywordtype}{string} \_groupName):list<ptrMultimedia>(),groupName(\_groupName)\{\};}
+\DoxyCodeLine{28         \textcolor{keywordtype}{string} getGroupName()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} groupName;\}}
+\DoxyCodeLine{29         \textcolor{keywordtype}{void} setGroupName(\textcolor{keywordtype}{string} \_name) \{groupName=\_name;\}}
+\DoxyCodeLine{30         \textcolor{keywordtype}{void} show(ostream \&s)\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{31             cout << \textcolor{stringliteral}{"{}For group : "{}} << groupName << \textcolor{stringliteral}{"{} : "{}} << endl;}
+\DoxyCodeLine{32             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} item : *\textcolor{keyword}{this})\{}
+\DoxyCodeLine{33                 item-\/>afficher(s);}
+\DoxyCodeLine{34                 cout << \textcolor{stringliteral}{"{}*******************************************************"{}} << endl;;}
+\DoxyCodeLine{35             \}}
+\DoxyCodeLine{36             }
+\DoxyCodeLine{37         \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \};}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

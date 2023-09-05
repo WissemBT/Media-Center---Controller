@@ -1,0 +1,46 @@
+\hypertarget{tcpserver_8h_source}{}\doxysection{tcpserver.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{//  tcpserver: TCP/IP INET Server.}}
+\DoxyCodeLine{3 \textcolor{comment}{//  (c) Eric Lecolinet -\/ Telecom ParisTech -\/ 2016.}}
+\DoxyCodeLine{4 \textcolor{comment}{//  http://www.telecom-\/paristech.fr/\string~elc}}
+\DoxyCodeLine{5 \textcolor{comment}{//}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef \_\_tcpserver\_\_}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define \_\_tcpserver\_\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}ccsocket.h"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }TCPConnection;}
+\DoxyCodeLine{15 \textcolor{keyword}{class }TCPLock;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{classTCPServer}{TCPServer}} \{}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22   \textcolor{keyword}{using }Callback =}
+\DoxyCodeLine{23   std::function< bool(std::string \textcolor{keyword}{const}\& request, std::string\& response) >;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{30   \mbox{\hyperlink{classTCPServer}{TCPServer}}(Callback \textcolor{keyword}{const}\& callback);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32   \textcolor{keyword}{virtual} \mbox{\hyperlink{classTCPServer}{\string~TCPServer}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{39   \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classTCPServer_a1409041961e91f1dbc4933483b4c3b23}{run}}(\textcolor{keywordtype}{int} port);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{keyword}{private}:}
+\DoxyCodeLine{42   \textcolor{keyword}{friend} \textcolor{keyword}{class }TCPLock;}
+\DoxyCodeLine{43   \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classSocketCnx}{SocketCnx}};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45   \mbox{\hyperlink{classTCPServer}{TCPServer}}(\mbox{\hyperlink{classTCPServer}{TCPServer}} \textcolor{keyword}{const}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{46   \mbox{\hyperlink{classTCPServer}{TCPServer}}\& operator=(\mbox{\hyperlink{classTCPServer}{TCPServer}} \textcolor{keyword}{const}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{47   \textcolor{keywordtype}{void} error(std::string \textcolor{keyword}{const}\& msg);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49   \mbox{\hyperlink{classServerSocket}{ServerSocket}} servsock\_;}
+\DoxyCodeLine{50   Callback callback\_\{\};}
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,42 @@
+\hypertarget{video_8h_source}{}\doxysection{video.\+h}
+\mbox{\hyperlink{video_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef VIDEO\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define VIDEO\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{multimedia_8h}{multimedia.h}}"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{classVideo}{Video}} : \textcolor{keyword}{public} \mbox{\hyperlink{classMultimedia}{Multimedia}}\{}
+\DoxyCodeLine{21     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{22         \textcolor{keywordtype}{int} duree\{\};}
+\DoxyCodeLine{23     \textcolor{keyword}{public}:}
+\DoxyCodeLine{24         \mbox{\hyperlink{classVideo}{Video}}()\{\}}
+\DoxyCodeLine{25         \mbox{\hyperlink{classVideo}{Video}}(\textcolor{keywordtype}{string} \_objName,\textcolor{keywordtype}{string} \_pathName,\textcolor{keywordtype}{int} \_duree):\mbox{\hyperlink{classMultimedia}{Multimedia}}(\_objName,\_pathName),duree(\_duree)\{\}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         \textcolor{keywordtype}{void} setDuree(\textcolor{keywordtype}{int} \_duree)\{}
+\DoxyCodeLine{28             duree=\_duree;}
+\DoxyCodeLine{29         \}}
+\DoxyCodeLine{30         }
+\DoxyCodeLine{31         \textcolor{keywordtype}{int} getDuree()\textcolor{keyword}{ const}\{}
+\DoxyCodeLine{32             \textcolor{keywordflow}{return} duree;}
+\DoxyCodeLine{33         \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \textcolor{keywordtype}{void} afficher(ostream \& s)\textcolor{keyword}{ const override}\{}
+\DoxyCodeLine{36             s << \textcolor{stringliteral}{"{}object name is  : "{}} << objName << endl;}
+\DoxyCodeLine{37             s << \textcolor{stringliteral}{"{}the path is : "{}} << pathName << endl;}
+\DoxyCodeLine{38             s << \textcolor{stringliteral}{"{}Duration is  : "{}} << duree << endl;}
+\DoxyCodeLine{39         \}}
+\DoxyCodeLine{44         \textcolor{keywordtype}{void} \mbox{\hyperlink{classVideo_ae7f2fdb2601de5b018b92a64323b77c9}{lire}}()\{}
+\DoxyCodeLine{45             \textcolor{keywordtype}{string} path=\textcolor{stringliteral}{"{}mpv "{}}+ pathName + \textcolor{stringliteral}{"{} \&"{}};}
+\DoxyCodeLine{46             system(path.data());}
+\DoxyCodeLine{47         \}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \mbox{\hyperlink{classVideo}{\string~Video}}()\textcolor{keyword}{ override}\{}
+\DoxyCodeLine{50          cout <<\textcolor{stringliteral}{"{} a video named "{}} << objName << \textcolor{stringliteral}{"{} was deleted!"{}} << endl;}
+\DoxyCodeLine{51            }
+\DoxyCodeLine{52         \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \};}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

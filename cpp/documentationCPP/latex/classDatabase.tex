@@ -1,0 +1,188 @@
+\hypertarget{classDatabase}{}\doxysection{Database Class Reference}
+\label{classDatabase}\index{Database@{Database}}
+
+
+the \mbox{\hyperlink{classDatabase}{Database}} class  
+
+
+
+
+{\ttfamily \#include $<$database.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+ptr\+Photo \mbox{\hyperlink{classDatabase_add9f1104b1e8f5967baf44c411c91142}{create\+Photo}} (string \+\_\+obj\+Name, string \+\_\+path\+Name, double \+\_\+latitude, double \+\_\+longitude)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classPhoto}{Photo}} object. \end{DoxyCompactList}\item 
+ptr\+Video \mbox{\hyperlink{classDatabase_aeaa03962b94930a82d5f86e29b4cfaa8}{create\+Video}} (string \+\_\+obj\+Name, string \+\_\+path\+Name, int \+\_\+duree)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classVideo}{Video}} object. \end{DoxyCompactList}\item 
+ptr\+Film \mbox{\hyperlink{classDatabase_a23e6f2a08bb0d508f78ccf4f2112d7cd}{create\+Film}} (string \+\_\+obj\+Name, string \+\_\+path\+Name, int \+\_\+duree, int \+\_\+n\+Of\+Chptrs, int $\ast$\+\_\+chptrs)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classFilm}{Film}} object. \end{DoxyCompactList}\item 
+ptr\+Group \mbox{\hyperlink{classDatabase_a36b028bc8cceb0462a6c20aeb4eb7dcb}{create\+Group}} (string \+\_\+group\+Name)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classGroup}{Group}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabase_ae0bb5fdf3994ee7217d13eddc2991606}{find\+ANDShow}} (string \+\_\+obj\+Name, ostream \&s)
+\begin{DoxyCompactList}\small\item\em Search for an object using its name , if it exists it call the afficher method else a message will be shown. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDatabase_a9b0a5ae006dcf565ab7585b345d4657c}{find\+ANDPlay}} (string \+\_\+obj\+Name)
+\begin{DoxyCompactList}\small\item\em search for a certain object by its name, if it exists it will be playen else a message will be shown \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDatabase_aace0a1812995e8e1d69bf6acb1d18ce0}{process\+Request}} (const string \&request, string \&response)
+\begin{DoxyCompactList}\small\item\em This method takes request and response as arguments, the request should be either find $<$filename$>$ or play $<$filename$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+the \mbox{\hyperlink{classDatabase}{Database}} class 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDatabase_a23e6f2a08bb0d508f78ccf4f2112d7cd}\label{classDatabase_a23e6f2a08bb0d508f78ccf4f2112d7cd}} 
+\index{Database@{Database}!createFilm@{createFilm}}
+\index{createFilm@{createFilm}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{createFilm()}{createFilm()}}
+{\footnotesize\ttfamily ptr\+Film Database\+::create\+Film (\begin{DoxyParamCaption}\item[{string}]{\+\_\+obj\+Name,  }\item[{string}]{\+\_\+path\+Name,  }\item[{int}]{\+\_\+duree,  }\item[{int}]{\+\_\+n\+Of\+Chptrs,  }\item[{int $\ast$}]{\+\_\+chptrs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a \mbox{\hyperlink{classFilm}{Film}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+obj\+Name} & \\
+\hline
+{\em \+\_\+path\+Name} & \\
+\hline
+{\em \+\_\+duree} & \\
+\hline
+{\em \+\_\+n\+Of\+Chptrs} & \\
+\hline
+{\em \+\_\+chptrs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ptr\+Film 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabase_a36b028bc8cceb0462a6c20aeb4eb7dcb}\label{classDatabase_a36b028bc8cceb0462a6c20aeb4eb7dcb}} 
+\index{Database@{Database}!createGroup@{createGroup}}
+\index{createGroup@{createGroup}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{createGroup()}{createGroup()}}
+{\footnotesize\ttfamily ptr\+Group Database\+::create\+Group (\begin{DoxyParamCaption}\item[{string}]{\+\_\+group\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a \mbox{\hyperlink{classGroup}{Group}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+group\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ptr\+Group 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabase_add9f1104b1e8f5967baf44c411c91142}\label{classDatabase_add9f1104b1e8f5967baf44c411c91142}} 
+\index{Database@{Database}!createPhoto@{createPhoto}}
+\index{createPhoto@{createPhoto}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{createPhoto()}{createPhoto()}}
+{\footnotesize\ttfamily ptr\+Photo Database\+::create\+Photo (\begin{DoxyParamCaption}\item[{string}]{\+\_\+obj\+Name,  }\item[{string}]{\+\_\+path\+Name,  }\item[{double}]{\+\_\+latitude,  }\item[{double}]{\+\_\+longitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a \mbox{\hyperlink{classPhoto}{Photo}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+obj\+Name} & \\
+\hline
+{\em \+\_\+path\+Name} & \\
+\hline
+{\em \+\_\+latitude} & \\
+\hline
+{\em \+\_\+longitude} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ptr\+Photo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabase_aeaa03962b94930a82d5f86e29b4cfaa8}\label{classDatabase_aeaa03962b94930a82d5f86e29b4cfaa8}} 
+\index{Database@{Database}!createVideo@{createVideo}}
+\index{createVideo@{createVideo}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{createVideo()}{createVideo()}}
+{\footnotesize\ttfamily ptr\+Video Database\+::create\+Video (\begin{DoxyParamCaption}\item[{string}]{\+\_\+obj\+Name,  }\item[{string}]{\+\_\+path\+Name,  }\item[{int}]{\+\_\+duree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a \mbox{\hyperlink{classVideo}{Video}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+obj\+Name} & \\
+\hline
+{\em \+\_\+path\+Name} & \\
+\hline
+{\em \+\_\+duree} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ptr\+Video 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabase_a9b0a5ae006dcf565ab7585b345d4657c}\label{classDatabase_a9b0a5ae006dcf565ab7585b345d4657c}} 
+\index{Database@{Database}!findANDPlay@{findANDPlay}}
+\index{findANDPlay@{findANDPlay}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{findANDPlay()}{findANDPlay()}}
+{\footnotesize\ttfamily int Database\+::find\+ANDPlay (\begin{DoxyParamCaption}\item[{string}]{\+\_\+obj\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+search for a certain object by its name, if it exists it will be playen else a message will be shown 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+obj\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabase_ae0bb5fdf3994ee7217d13eddc2991606}\label{classDatabase_ae0bb5fdf3994ee7217d13eddc2991606}} 
+\index{Database@{Database}!findANDShow@{findANDShow}}
+\index{findANDShow@{findANDShow}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{findANDShow()}{findANDShow()}}
+{\footnotesize\ttfamily void Database\+::find\+ANDShow (\begin{DoxyParamCaption}\item[{string}]{\+\_\+obj\+Name,  }\item[{ostream \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Search for an object using its name , if it exists it call the afficher method else a message will be shown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+obj\+Name} & \\
+\hline
+{\em s} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDatabase_aace0a1812995e8e1d69bf6acb1d18ce0}\label{classDatabase_aace0a1812995e8e1d69bf6acb1d18ce0}} 
+\index{Database@{Database}!processRequest@{processRequest}}
+\index{processRequest@{processRequest}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{processRequest()}{processRequest()}}
+{\footnotesize\ttfamily bool Database\+::process\+Request (\begin{DoxyParamCaption}\item[{const string \&}]{request,  }\item[{string \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method takes request and response as arguments, the request should be either find $<$filename$>$ or play $<$filename$>$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & \\
+\hline
+{\em response} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{database_8h}{database.\+h}}\end{DoxyCompactItemize}

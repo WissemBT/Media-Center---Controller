@@ -1,0 +1,82 @@
+\hypertarget{classMultimedia}{}\doxysection{Multimedia Class Reference}
+\label{classMultimedia}\index{Multimedia@{Multimedia}}
+
+
+an abstract class which will be herited by \mbox{\hyperlink{classPhoto}{Photo}} and \mbox{\hyperlink{classVideo}{Video}} classes  
+
+
+
+
+{\ttfamily \#include $<$multimedia.\+h$>$}
+
+Inheritance diagram for Multimedia\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMultimedia}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMultimedia_a7e7f10ca35462517d2dac3efa1f7583d}\label{classMultimedia_a7e7f10ca35462517d2dac3efa1f7583d}} 
+{\bfseries Multimedia} (string \+\_\+obj\+Name, string \+\_\+path\+Name)
+\item 
+\mbox{\Hypertarget{classMultimedia_a30a2cab35d7f610e125b2b5e5ef63e36}\label{classMultimedia_a30a2cab35d7f610e125b2b5e5ef63e36}} 
+string {\bfseries get\+Obj\+Name} () const
+\item 
+\mbox{\Hypertarget{classMultimedia_ad2e1a1cbbab733975c5ad5df7f640b0b}\label{classMultimedia_ad2e1a1cbbab733975c5ad5df7f640b0b}} 
+string {\bfseries get\+Path\+Name} () const
+\item 
+\mbox{\Hypertarget{classMultimedia_a6a85f50bcd2f9f847b3083a48c072d63}\label{classMultimedia_a6a85f50bcd2f9f847b3083a48c072d63}} 
+void {\bfseries set\+Obj\+Name} (string \+\_\+obj\+Name)
+\item 
+\mbox{\Hypertarget{classMultimedia_ac0cd33b4e2569ef888112c0bee6d090b}\label{classMultimedia_ac0cd33b4e2569ef888112c0bee6d090b}} 
+void {\bfseries set\+Path\+Name} (string \+\_\+path\+Name)
+\item 
+virtual void \mbox{\hyperlink{classMultimedia_a734507cceeb165c1c73aab1bd3bc4153}{afficher}} (ostream \&s) const
+\item 
+virtual void \mbox{\hyperlink{classMultimedia_adc3fc513622fd308f52c6a3d1b028aa7}{lire}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMultimedia_ab530625294918a486727df6644541f27}\label{classMultimedia_ab530625294918a486727df6644541f27}} 
+string {\bfseries obj\+Name} \{\}
+\item 
+\mbox{\Hypertarget{classMultimedia_a78f87c00cbac8bb44f0c76a542d2d2b9}\label{classMultimedia_a78f87c00cbac8bb44f0c76a542d2d2b9}} 
+string {\bfseries path\+Name} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+an abstract class which will be herited by \mbox{\hyperlink{classPhoto}{Photo}} and \mbox{\hyperlink{classVideo}{Video}} classes 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMultimedia_a734507cceeb165c1c73aab1bd3bc4153}\label{classMultimedia_a734507cceeb165c1c73aab1bd3bc4153}} 
+\index{Multimedia@{Multimedia}!afficher@{afficher}}
+\index{afficher@{afficher}!Multimedia@{Multimedia}}
+\doxysubsubsection{\texorpdfstring{afficher()}{afficher()}}
+{\footnotesize\ttfamily void Multimedia\+::afficher (\begin{DoxyParamCaption}\item[{ostream \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classPhoto_a103c0c26d254fda2c84e32e006661a34}{Photo}}.
+
+\mbox{\Hypertarget{classMultimedia_adc3fc513622fd308f52c6a3d1b028aa7}\label{classMultimedia_adc3fc513622fd308f52c6a3d1b028aa7}} 
+\index{Multimedia@{Multimedia}!lire@{lire}}
+\index{lire@{lire}!Multimedia@{Multimedia}}
+\doxysubsubsection{\texorpdfstring{lire()}{lire()}}
+{\footnotesize\ttfamily virtual void Multimedia\+::lire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classPhoto_a73b0ae905ecedc6e0a60e0814442b35f}{Photo}}, and \mbox{\hyperlink{classVideo_ae7f2fdb2601de5b018b92a64323b77c9}{Video}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{multimedia_8h}{multimedia.\+h}}\item 
+\mbox{\hyperlink{multimedia_8cpp}{multimedia.\+cpp}}\end{DoxyCompactItemize}

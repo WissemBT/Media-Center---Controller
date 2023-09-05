@@ -1,0 +1,91 @@
+\hypertarget{film_8h_source}{}\doxysection{film.\+h}
+\mbox{\hyperlink{film_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef FILM\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define FILM\_H}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{video_8h}{video.h}}"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{classFilm}{Film}}: \textcolor{keyword}{public} \mbox{\hyperlink{classVideo}{Video}}\{}
+\DoxyCodeLine{20     \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int}* chapters = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} nbrOfChapters = 0;}
+\DoxyCodeLine{23     \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{classFilm}{Film}}()\{\};}
+\DoxyCodeLine{25     \mbox{\hyperlink{classFilm}{Film}}(\textcolor{keywordtype}{string} \_objName,\textcolor{keywordtype}{string} \_pathName,\textcolor{keywordtype}{int} \_duree,\textcolor{keywordtype}{int} \_nbrOfChapters=0,\textcolor{keywordtype}{int} *\_chapters=\textcolor{keyword}{nullptr}):\mbox{\hyperlink{classVideo}{Video}}(\_objName,\_pathName,\_duree)}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         \textcolor{keywordflow}{if}(\_nbrOfChapters \&\& \_chapters)\{}
+\DoxyCodeLine{28         nbrOfChapters=\_nbrOfChapters;}
+\DoxyCodeLine{29         chapters= \textcolor{keyword}{new} \textcolor{keywordtype}{int}[nbrOfChapters];}
+\DoxyCodeLine{30         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0;i<nbrOfChapters;i++)}
+\DoxyCodeLine{31             chapters[i]=\_chapters[i];}
+\DoxyCodeLine{32         \}}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{classFilm_a5d3beec5ffe551d4c3d19abc64d31b24}{setChapters}}(\textcolor{keywordtype}{int} *\_chapters=\textcolor{keyword}{nullptr},\textcolor{keywordtype}{int} \_nbrOfChapters=0)}
+\DoxyCodeLine{41     \{}
+\DoxyCodeLine{42         \textcolor{keywordflow}{if} (\_chapters \&\& \_nbrOfChapters)\{}
+\DoxyCodeLine{43             \textcolor{keywordflow}{if}(chapters) \textcolor{keyword}{delete}[] chapters;}
+\DoxyCodeLine{44         \}}
+\DoxyCodeLine{45         nbrOfChapters = \_nbrOfChapters;}
+\DoxyCodeLine{46         chapters = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[nbrOfChapters];}
+\DoxyCodeLine{47         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0;i<nbrOfChapters;i++)}
+\DoxyCodeLine{48         \{}
+\DoxyCodeLine{49             chapters[i]=\_chapters[i];}
+\DoxyCodeLine{50         \}}
+\DoxyCodeLine{51     \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} getNbrOfChapters()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} nbrOfChapters;\}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{keyword}{const} \textcolor{keywordtype}{int}* getChapters()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} chapters;\}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} afficher(ostream \& s)\textcolor{keyword}{ const override}\{}
+\DoxyCodeLine{58         s << \textcolor{stringliteral}{"{}Film name "{}} << objName << endl;}
+\DoxyCodeLine{59         s << \textcolor{stringliteral}{"{}Film path "{}} << pathName << endl;}
+\DoxyCodeLine{60         s << \textcolor{stringliteral}{"{}Duration "{}} << duree << endl;}
+\DoxyCodeLine{61         \textcolor{keywordflow}{if} (nbrOfChapters \&\& chapters)\{}
+\DoxyCodeLine{62             s << \textcolor{stringliteral}{"{}nbrOf Chapters is : "{}} << nbrOfChapters << endl;}
+\DoxyCodeLine{63             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0;i<nbrOfChapters;i++)\{}
+\DoxyCodeLine{64                 s << chapters[i] << \textcolor{stringliteral}{"{} | "{}};}
+\DoxyCodeLine{65             }
+\DoxyCodeLine{66             \}}
+\DoxyCodeLine{67             s << endl;}
+\DoxyCodeLine{68             \}}
+\DoxyCodeLine{69             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{70                 s << \textcolor{stringliteral}{"{}There's no chapters"{}} << endl;}
+\DoxyCodeLine{71             \}}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{78     \mbox{\hyperlink{classFilm_a68f781851622ec80878c9a6e7ccb925e}{Film}}(\textcolor{keyword}{const} \mbox{\hyperlink{classFilm}{Film}} \& from):\mbox{\hyperlink{classVideo}{Video}}(from.objName,from.pathName,from.duree)\{}
+\DoxyCodeLine{79         \textcolor{keywordtype}{int} \_nbrOfChapters=from.getNbrOfChapters();}
+\DoxyCodeLine{80         \textcolor{keyword}{const} \textcolor{keywordtype}{int} *\_chapters=from.getChapters();}
+\DoxyCodeLine{81         \textcolor{keywordflow}{if}(\_nbrOfChapters \&\& \_chapters)\{}
+\DoxyCodeLine{82             nbrOfChapters = \_nbrOfChapters;}
+\DoxyCodeLine{83             chapters=\textcolor{keyword}{new} \textcolor{keywordtype}{int}[nbrOfChapters];}
+\DoxyCodeLine{84             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<nbrOfChapters;i++)}
+\DoxyCodeLine{85                 chapters[i]=\_chapters[i];}
+\DoxyCodeLine{86         \} }
+\DoxyCodeLine{87         }
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{95     \mbox{\hyperlink{classFilm}{Film}} \& \mbox{\hyperlink{classFilm_ac0b358393c6e1d293141c5c96cd9a3be}{operator= }}(\textcolor{keyword}{const} \mbox{\hyperlink{classFilm}{Film}} \& from)\{}
+\DoxyCodeLine{96         Video::operator=(from);}
+\DoxyCodeLine{97         \textcolor{keywordtype}{int} \_nbrOfChapters=from.getNbrOfChapters();}
+\DoxyCodeLine{98         \textcolor{keyword}{const} \textcolor{keywordtype}{int} * \_chapters=from.getChapters();}
+\DoxyCodeLine{99         \textcolor{keywordflow}{if}(\_nbrOfChapters \&\& \_chapters)\{}
+\DoxyCodeLine{100             \textcolor{keywordflow}{if}(chapters)\{}
+\DoxyCodeLine{101                 \textcolor{keyword}{delete}[] chapters;}
+\DoxyCodeLine{102             \}}
+\DoxyCodeLine{103             nbrOfChapters = \_nbrOfChapters;}
+\DoxyCodeLine{104             chapters = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[nbrOfChapters];}
+\DoxyCodeLine{105             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<nbrOfChapters;i++)}
+\DoxyCodeLine{106                 chapters[i]=\_chapters[i];       }
+\DoxyCodeLine{107         \}}
+\DoxyCodeLine{108         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{109     \}}
+\DoxyCodeLine{114     \textcolor{keyword}{virtual} \mbox{\hyperlink{classFilm_a490465154daeb29961fddb843a864eeb}{\string~Film}}()\{}
+\DoxyCodeLine{115         \textcolor{keywordflow}{if}(chapters) \textcolor{keyword}{delete}[] chapters;}
+\DoxyCodeLine{116         cout <<\textcolor{stringliteral}{"{} a film named "{}} << objName << \textcolor{stringliteral}{"{} was deleted!"{}} << endl;}
+\DoxyCodeLine{117     \}}
+\DoxyCodeLine{118     }
+\DoxyCodeLine{119 \};}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
